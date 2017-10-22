@@ -18,6 +18,4 @@ Component.childContextTypes = {
   dispatch: PropTypes.func,
 };
 
-export default {
-  LogicRender,
-};
+export default LogicRender;

@@ -5,7 +5,7 @@ module.exports = {
   output: {
     path: 'dist',
     filename: 'index.js',
-    library: 'refast-logic-render',
+    library: 'LogicRender',
     libraryTarget: 'umd',
   },
   module: {
@@ -24,6 +24,13 @@ module.exports = {
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react',
+    },
+    refast: {
+      root: 'Refast',
+      var: 'Refast',
+      commonjs: 'refast',
+      commonjs2: 'refast',
+      amd: 'refast',
     }
   },
   plugins: [

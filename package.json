@@ -36,11 +36,11 @@
     "eslint-config-airbnb": "^15.1.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.3.0",
+    "rimraf": "^2.3.4",
+    "webpack": "^1.13.3",
     "react": "^15.6.0",
     "prop-types":"^15.6.0",
-    "refast": "^2.0.0",
-    "rimraf": "^2.3.4",
-    "webpack": "^1.13.3"
+    "refast": "^1.2.3"
   },
   "author": "fengsx https://github.com/fengsx",
   "bugs": {
