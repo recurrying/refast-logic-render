@@ -1,6 +1,6 @@
 {
   "name": "refast-logic-render",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "LogicRender for Refast, a powerful SMART component",
   "main": "dist/index.js",
   "scripts": {
