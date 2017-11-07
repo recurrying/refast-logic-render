@@ -10,9 +10,9 @@ export default class LogicRender extends Component {
       PropTypes.array,
     ]),
     awareOf: PropTypes.any,
-    empty: PropTypes.bool,
-    loading: PropTypes.bool,
-    show: PropTypes.bool,
+    isEmpty: PropTypes.bool,
+    isLoading: PropTypes.bool,
+    isShow: PropTypes.bool,
     className: PropTypes.string,
     Loading: PropTypes.element,
     Empty: PropTypes.element,
@@ -25,9 +25,9 @@ export default class LogicRender extends Component {
   static defaultProps = {
     action: null,
     awareOf: '',
-    empty: false,
-    loading: false,
-    show: true,
+    isEmpty: false,
+    isLoading: false,
+    isShow: true,
     children: [],
     Loading: 'div',
     Empty: 'div',
@@ -57,9 +57,9 @@ export default class LogicRender extends Component {
   render() {
     let content = null;
     const {
-      show,
-      loading,
-      empty,
+      isShow,
+      isLoading,
+      isEmpty,
       children,
       className,
       Loading,
@@ -67,16 +67,16 @@ export default class LogicRender extends Component {
     } = this.props;
     const cls = className || '';
 
-    if (!show) {
+    if (!isShow) {
       content = <div />;
-    } else if (loading) {
+    } else if (isLoading) {
       content = (
         <Loading
           {...this.props}
           className={`${cls} refast-loading`}
         />
       );
-    } else if (empty) {
+    } else if (isEmpty) {
       content = (
         <Empty
           {...this.props}
@@ -84,9 +84,7 @@ export default class LogicRender extends Component {
         />
       );
     } else {
-      content = (
-        <div className={cls}>{children}</div>
-      );
+      content = <div className={cls}>{children}</div>;
     }
 
     return content;
