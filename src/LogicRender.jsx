@@ -14,8 +14,17 @@ export default class LogicRender extends React.Component {
     isLoading: PropTypes.bool,
     isShow: PropTypes.bool,
     className: PropTypes.string,
-    Loading: PropTypes.node,
-    Empty: PropTypes.node,
+    Loading: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+      PropTypes.func,
+    ]),
+    Empty: PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.element,
+      PropTypes.func,
+    ]),
+    children: PropTypes.any,
   }
 
   static defaultProps = {
@@ -24,7 +33,7 @@ export default class LogicRender extends React.Component {
     isEmpty: false,
     isLoading: false,
     isShow: true,
-    children: [],
+    children: null,
     Loading: 'div',
     Empty: 'div',
   }
