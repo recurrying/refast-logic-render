@@ -7,19 +7,15 @@ export default class LogicRender extends Component {
   static propTypes = {
     action: PropTypes.oneOfType([
       PropTypes.string,
-      PropTypes.array,
+      PropTypes.arrayOf(PropTypes.string),
     ]),
-    awareOf: PropTypes.any,
+    awareOf: PropTypes.object,
     isEmpty: PropTypes.bool,
     isLoading: PropTypes.bool,
     isShow: PropTypes.bool,
     className: PropTypes.string,
-    Loading: PropTypes.element,
-    Empty: PropTypes.element,
-    children: PropTypes.oneOfType([
-      PropTypes.element,
-      PropTypes.array,
-    ]),
+    Loading: PropTypes.node,
+    Empty: PropTypes.node,
   }
 
   static defaultProps = {
