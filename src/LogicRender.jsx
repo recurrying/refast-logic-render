@@ -1,8 +1,8 @@
-import { Component } from 'react';
+import React from 'react';
 import { PropTypes } from 'prop-types';
 import isEqual from 'lodash.isequal';
 
-export default class LogicRender extends Component {
+export default class LogicRender extends React.Component {
 
   static propTypes = {
     action: PropTypes.oneOfType([
