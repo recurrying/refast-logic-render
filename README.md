@@ -26,7 +26,7 @@ https://unpkg.com/refast-logic-render/dist/index.js
 https://unpkg.com/refast-logic-render@[version]/dist/index.js
 
 ## 初始化
-在 2.x 版本之前， LogicRender 是集成到 Refast 中的，不需要特意初始化，可以直接使用。在 2.x 及以后的版本中，如果你要在使用了 Refast 的组件及其子组件中使用，需要对手动绑定：
+在 2.x 版本之前， LogicRender 是集成到 Refast 中的，可以直接使用。在 2.x 及以后的版本中，如果你要在使用了 Refast 的组件及其子组件中使用，需要手动绑定：
 
 - 如果你使用了 Decorators
 ```javascript
