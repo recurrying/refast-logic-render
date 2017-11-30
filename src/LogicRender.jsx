@@ -29,7 +29,7 @@ export default class LogicRender extends React.Component {
 
   static defaultProps = {
     action: null,
-    awareOf: '',
+    awareOf: {},
     isEmpty: false,
     isLoading: false,
     isShow: true,
@@ -46,14 +46,15 @@ export default class LogicRender extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (!isEqual(nextProps.awareOf, this.props.awareOf)) {
-      this.dispatchAction();
+    const { awareOf, action } = nextProps;
+    if (!isEqual(action, this.props.action) || !isEqual(awareOf, this.props.awareOf)) {
+      this.dispatchAction(nextProps);
     }
   }
 
-  dispatchAction() {
+  dispatchAction(props) {
     const { dispatch } = this.context;
-    const { action, awareOf } = this.props;
+    const { action, awareOf } = props || this.props;
     if (action) {
       dispatch(action, awareOf);
     }
